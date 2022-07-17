@@ -5,3 +5,5 @@ host:
     wlan:
     eth: enp1s0
     dock:
+  gfx_packages:
+    - xf86-video-qxl

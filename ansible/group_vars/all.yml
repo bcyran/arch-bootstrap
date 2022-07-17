@@ -63,6 +63,7 @@ packages:
       - keepassxc
       - light
       - lxappearance
+      - mesa
       - nm-connection-editor
       - noto-fonts-cjk
       - noto-fonts-emoji
@@ -83,10 +84,10 @@ packages:
       - wmctrl
       - xautolock
       - xdg-user-dirs
-      - xf86-video-intel
-      - xf86-video-vesa
       - xorg-font-util
       - xorg-fonts-100dpi
+      - xorg-server
+      - xorg-xinit
       - zathura
       - zathura-pdf-mupdf
     aur:
