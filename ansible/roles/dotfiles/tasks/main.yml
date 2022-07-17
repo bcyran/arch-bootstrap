@@ -9,7 +9,7 @@
 - name: Init chezmoi
   command:
     cmd: "chezmoi init {{ dotfiles.repo }}"
-    creates: .local/share/chezmoi
+    creates: "/home/{{ user.name }}/.local/share/chezmoi"
   become: true
   become_user: "{{ user.name }}"
   register: chezmoi_init
@@ -19,7 +19,7 @@
 - name: Update dotfiles
   git:
     repo: "{{ dotfiles.repo }}"
-    dest: .local/share/chezmoi
+    dest: "/home/{{ user.name }}/.local/share/chezmoi"
     clone: false
     update: true
   become: true
@@ -30,21 +30,17 @@
 
 - name: Create chezmoi config dir
   file:
-    path: .config/chezmoi
+    path: "/home/{{ user.name }}/.config/chezmoi"
     state: directory
     owner: "{{ user.name }}"
-  become: true
-  become_user: "{{ user.name }}"
   tags:
     - dotfiles
 
 - name: Install chezmoi config
   template:
     src: templates/chezmoi.yaml.j2
-    dest: .config/chezmoi/chezmoi.yaml
+    dest: "/home/{{ user.name }}/.config/chezmoi/chezmoi.yaml"
     owner: "{{ user.name }}"
-  become: true
-  become_user: "{{ user.name }}"
   tags:
     - dotfiles
 

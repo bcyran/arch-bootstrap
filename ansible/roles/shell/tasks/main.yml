@@ -16,7 +16,7 @@
 
 - name: Install zsh plugins via antibody
   shell:
-    cmd: antibody bundle < ~/.zsh/plugins.txt > ~/.zsh_plugins.sh
+    cmd: "antibody bundle < /home/{{ user.name }}/.zsh/plugins.txt > /home/{{ user.name }}/.zsh_plugins.sh"
     creates: .zsh_plugins.sh
   become: true
   become_user: "{{ user.name }}"
