@@ -37,7 +37,8 @@
         "git",
         "zsh",
         "neovim",
-        "ansible"
+        "ansible",
+        "python-pip"
     ],
     "plugin": null,
     "profile": {
