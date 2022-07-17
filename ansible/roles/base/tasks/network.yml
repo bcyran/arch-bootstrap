@@ -1,0 +1,8 @@
+---
+- name: Enable NetworkManager
+  service:
+    name: NetworkManager.service
+    state: started
+    enabled: true
+  tags:
+    - network

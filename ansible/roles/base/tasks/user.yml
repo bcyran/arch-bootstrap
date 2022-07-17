@@ -1,0 +1,16 @@
+---
+- name: Create user group
+  group:
+    name: "{{ user.group }}"
+    state: present
+  tags:
+    - user
+
+- name: Create user and add to group
+  user:
+    name: "{{ user.name }}"
+    groups: "{{ user.group }}"
+    shell: "{{ user.shell }}"
+    append: yes
+  tags:
+    - user

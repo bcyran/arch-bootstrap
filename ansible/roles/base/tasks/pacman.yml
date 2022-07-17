@@ -1,0 +1,28 @@
+---
+- name: Install pacman configuration
+  copy:
+    src: files/pacman.conf
+    dest: /etc/pacman.conf
+  tags:
+    - pacman
+
+- name: Refresh pacman cache
+  pacman:
+    update_cache: yes
+  tags: 
+    - pacman
+
+- name: Install base packages
+  pacman:
+    name: "{{ packages.base.pacman }}"
+    state: present
+  tags: 
+    - pacman
+
+- name: Enable automatic pacman mirorrlists refreshing
+  systemd:
+    name: reflector.timer
+    state: started 
+    enabled: true
+  tags:
+    - pacman

@@ -1,0 +1,24 @@
+diff:
+  pager: delta
+merge:
+  command: nvim
+  args: ["-d", "{% raw %}{{ .Destination }}{% endraw %}", "{% raw %}{{ .Source }}{% endraw %}", "{% raw %}{{ .Target }}{% endraw %}"]
+
+data:
+  user:
+    email: "{{ user.email }}"
+  machine:
+    id: "{{ host.id }}"
+    network:
+      wlan: "{{ host.network.wlan }}"
+      eth: "{{ host.network.eth }}"
+      dock: "{{ host.network.dock }}"
+  settings:
+    gui: {{ settings.gui | default(true, true) }}
+    screenlock:
+      enable: {{ settings.screenlock.enable | default(false, true) }}
+      time: {{ settings.screenlock.time | default(30, true) }}
+    dirs:
+      code: "/home/{{ user.name }}/Kod"
+      screenshots: "/home/{{ user.name }}/Obrazy/Zrzuty ekranu"
+      wallpapers: "/home/{{ user.name }}/Obrazy/Tapety"

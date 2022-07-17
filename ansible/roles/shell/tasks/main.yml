@@ -1,0 +1,25 @@
+---
+- name: Install shell-related pacman packages
+  pacman:
+    name: "{{ packages.shell.pacman }}"
+  tags:
+    - shell
+
+- name: Install shell-related AUR packages
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ packages.shell.aur }}"
+  become: true
+  become_user: aur_builder
+  tags:
+    - shell
+
+- name: Install zsh plugins via antibody
+  shell:
+    cmd: antibody bundle < ~/.zsh/plugins.txt > ~/.zsh_plugins.sh
+    creates: .zsh_plugins.sh
+  become: true
+  become_user: "{{ user.name }}"
+  tags:
+    - zsh
+    - shell

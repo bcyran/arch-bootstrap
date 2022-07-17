@@ -1,0 +1,7 @@
+host:
+  name: bazyli
+  id: home
+  network:
+    wlan: wlp0s20f3
+    eth: enp4s0
+    dock: enp10s0u2u1u2

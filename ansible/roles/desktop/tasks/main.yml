@@ -1,0 +1,25 @@
+---
+- name: Install desktop-related pacman packages
+  pacman:
+    name: "{{ packages.desktop.pacman }}"
+  tags:
+    - desktop
+
+- name: Install desktop-related AUR packages
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ packages.desktop.aur }}"
+  become: true
+  become_user: aur_builder
+  tags:
+    - desktop
+
+- name: Add user to video group
+  user:
+    name: "{{ user.name }}"
+    groups:
+      - "{{ user.group }}"
+      - video
+    append: yes
+  tags:
+    - desktop

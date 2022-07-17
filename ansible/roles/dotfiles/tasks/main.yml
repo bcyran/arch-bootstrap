@@ -1,0 +1,58 @@
+---
+- name: Install chezmoi
+  pacman:
+    name: chezmoi
+    state: present
+  tags:
+    - dotfiles
+
+- name: Init chezmoi
+  command:
+    cmd: "chezmoi init {{ dotfiles.repo }}"
+    creates: .local/share/chezmoi
+  become: true
+  become_user: "{{ user.name }}"
+  register: chezmoi_init
+  tags:
+    - dotfiles
+
+- name: Update dotfiles
+  git:
+    repo: "{{ dotfiles.repo }}"
+    dest: .local/share/chezmoi
+    clone: false
+    update: true
+  become: true
+  become_user: "{{ user.name }}"
+  when: chezmoi_init.changed == false
+  tags:
+    - dotfiles
+
+- name: Install chezmoi config
+  template:
+    src: templates/chezmoi.yaml.j2
+    dest: .config/chezmoi/chezmoi.yaml
+  become: true
+  become_user: "{{ user.name }}"
+  tags:
+    - dotfiles
+
+- name: Get chezmoi status
+  command:
+    cmd: chezmoi status
+  ignore_errors: true
+  become: true
+  become_user: "{{ user.name }}"
+  register: chezmoi_status
+  changed_when: chezmoi_status.stdout != ""
+  tags:
+    - dotfiles
+
+- name: Apply dotfiles
+  command:
+    cmd: chezmoi apply --force
+  when: chezmoi_status.stdout != ""
+  become: true
+  become_user: "{{ user.name }}"
+  tags:
+    - dotfiles

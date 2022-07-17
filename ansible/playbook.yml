@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  roles:
+    - base
+    - dotfiles
+    - shell
+    - desktop
+    - snapper
+    - mxmaster

@@ -1,0 +1,6 @@
+---
+- name: Set the hostname
+  hostname:
+    name: "{{ host.name }}"
+  tags:
+    - host

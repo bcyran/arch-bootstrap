@@ -1,0 +1,7 @@
+host:
+  name: vm
+  id: vm
+  network:
+    wlan:
+    eth: enp1s0
+    dock:

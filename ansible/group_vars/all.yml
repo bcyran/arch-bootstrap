@@ -1,0 +1,131 @@
+user:
+  name: bazyli
+  group: bazyli
+  email: bazyli.cyran@gmail.com
+  shell: /usr/bin/zsh
+
+dotfiles:
+  repo: https://github.com/bcyran/dotfiles.git
+
+packages:
+  base:
+    pacman:
+      - base-devel
+      - bc
+      - curl
+      - git
+      - htop
+      - man-db
+      - man-pages
+      - neovim
+      - networkmanager
+      - pacman-contrib
+      - reflector
+      - rsync
+      - tmux
+      - wget
+      - zsh
+  shell:
+    pacman:
+      - bat
+      - btop
+      - exa
+      - fzf
+      - git-delta
+      - ranger
+      - ripgrep
+      - the_silver_searcher
+      - tmux
+      - tree
+    aur:
+      - antibody-bin
+      - autojump
+  desktop:
+    pacman:
+      - alacritty
+      - alsa-utils
+      - arandr
+      - autorandr
+      - blueman
+      - bluez-utils
+      - ddcutil
+      - dunst
+      - feh
+      - file-roller
+      - firefox
+      - flameshot
+      - gnome-calculator
+      - gnu-free-fonts
+      - gthumb
+      - gvfs
+      - i3-gaps
+      - inotify-tools
+      - keepassxc
+      - light
+      - lxappearance
+      - nm-connection-editor
+      - noto-fonts-cjk
+      - noto-fonts-emoji
+      - pavucontrol
+      - playerctl
+      - polybar
+      - pulseaudio-bluetooth
+      - redshift
+      - rofi
+      - thunar
+      - thunar-archive-plugin
+      - thunar-volman
+      - tlp
+      - ttf-dejavu
+      - ttf-font-awesome
+      - ttf-roboto
+      - tumbler
+      - wmctrl
+      - xautolock
+      - xdg-user-dirs
+      - xf86-video-intel
+      - xf86-video-vesa
+      - xorg-font-util
+      - xorg-fonts-100dpi
+      - zathura
+      - zathura-pdf-mupdf
+    aur:
+      - appimagelauncher
+      - autotiling
+      - batify-git
+      - ddcci-driver-linux-dkms
+      - i3lock-color
+      - nerd-fonts-fira-code
+      - paper-icon-theme-git
+      - picom-ibhagwan-git
+      - themix-export-spotify-git
+      - themix-gui-git
+      - ttf-icomoon-feather
+      - xbanish
+      - xcursor-breeze
+  others:
+    pacman:
+      - docker
+      - figlet
+      - gimp
+      - gnucash
+      - gparted
+      - httpie
+      - jq
+      - libreoffice-fresh
+      - libreoffice-fresh-pl
+      - neofetch
+      - obsidian
+      - peek
+      - python-black
+      - python-isort
+      - python-pip
+      - python-poetry
+      - python-pynvim
+      - python-tox
+      - screenkey
+      - thunderbird
+      - vlc
+    aur:
+      - megasync-bin
+      - spotify
