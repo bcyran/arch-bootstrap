@@ -1,0 +1,51 @@
+{
+    "additional-repositories": [],
+    "archinstall-language": "Polish",
+    "audio": "pulseaudio",
+    "config_version": "2.5.0",
+    "debug": false,
+    "gfx_driver": "Intel (open-source)",
+    "hostname": "archlinux",
+    "keyboard-layout": "pl",
+    "mirror-region": {
+        "Poland": {
+            "http://arch.midov.pl/arch/$repo/os/$arch": true,
+            "http://ftp.icm.edu.pl/pub/Linux/dist/archlinux/$repo/os/$arch": true,
+            "http://ftp.psnc.pl/linux/archlinux/$repo/os/$arch": true,
+            "http://ftp.vectranet.pl/archlinux/$repo/os/$arch": true,
+            "http://mirror.juniorjpdj.pl/archlinux/$repo/os/$arch": true,
+            "http://mirror.onet.pl/pub/mirrors/archlinux/$repo/os/$arch": true,
+            "http://repo.skni.umcs.pl/archlinux/$repo/os/$arch": true,
+            "https://arch.midov.pl/arch/$repo/os/$arch": true,
+            "https://ftp.icm.edu.pl/pub/Linux/dist/archlinux/$repo/os/$arch": true,
+            "https://ftp.psnc.pl/linux/archlinux/$repo/os/$arch": true,
+            "https://mirror.eloteam.tk/archlinux/$repo/os/$arch": true,
+            "https://mirror.juniorjpdj.pl/archlinux/$repo/os/$arch": true,
+            "https://repo.skni.umcs.pl/archlinux/$repo/os/$arch": true
+        }
+    },
+    "mount_point": null,
+    "nic": {
+        "dhcp": true,
+        "dns": null,
+        "gateway": null,
+        "iface": null,
+        "ip": null,
+        "type": "nm"
+    },
+    "packages": [
+        "git",
+        "zsh",
+        "neovim",
+        "ansible"
+    ],
+    "plugin": null,
+    "profile": {
+        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
+    },
+    "script": "guided",
+    "silent": false,
+    "sys-encoding": "UTF-8",
+    "timezone": "Europe/Warsaw",
+    "version": "2.5.0"
+}
