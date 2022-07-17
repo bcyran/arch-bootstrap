@@ -28,10 +28,21 @@
   tags:
     - dotfiles
 
+- name: Create chezmoi config dir
+  file:
+    path: .config/chezmoi
+    state: directory
+    owner: "{{ user.name }}"
+  become: true
+  become_user: "{{ user.name }}"
+  tags:
+    - dotfiles
+
 - name: Install chezmoi config
   template:
     src: templates/chezmoi.yaml.j2
     dest: .config/chezmoi/chezmoi.yaml
+    owner: "{{ user.name }}"
   become: true
   become_user: "{{ user.name }}"
   tags:
