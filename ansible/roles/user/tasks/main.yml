@@ -1,0 +1,4 @@
+---
+- include_tasks: user.yml
+- include_tasks: sudo.yml
+- include_tasks: systemd.yml

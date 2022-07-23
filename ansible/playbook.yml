@@ -2,7 +2,8 @@
 - hosts: all
   become: true
   roles:
-    - base
+    - system
+    - user
     - dotfiles
     - shell
     - desktop
