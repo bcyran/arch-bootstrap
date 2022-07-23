@@ -49,8 +49,6 @@ packages:
       - alsa-utils
       - arandr
       - autorandr
-      - blueman
-      - bluez-utils
       - ddcutil
       - dunst
       - feh
@@ -73,7 +71,6 @@ packages:
       - pavucontrol
       - playerctl
       - polybar
-      - pulseaudio-bluetooth
       - redshift
       - rofi
       - thunar

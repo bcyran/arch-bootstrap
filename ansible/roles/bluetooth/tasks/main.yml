@@ -1,0 +1,29 @@
+---
+- name: Install bluetooth packages
+  pacman:
+    name:
+      - blueman
+      - bluez-utils
+      - pulseaudio-bluetooth
+    state: present
+  tags:
+    - bluetooth
+
+- name: Auto enable bluetooth
+  lineinfile:
+    path: /etc/bluetooth/main.conf
+    regexp: ".*AutoEnable.*"
+    line: "AutoEnable=true"
+  tags:
+    - bluetooth
+
+- name: Setup pulseaudio for bluetooth
+  lineinfile:
+    path: /etc/pulse/system.pa
+    line: "{{ item }}"
+  loop:
+    - "load-module module-bluetooth-policy"
+    - "load-module module-bluetooth-discover"
+    - "load-module module-switch-on-connect"
+  tags:
+    - bluetooth
