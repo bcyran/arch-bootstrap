@@ -1,4 +1,40 @@
 ---
+- name: Set the timezone
+  file:
+    src: /usr/share/zoneinfo/Europe/Warsaw
+    dest: /etc/localtime
+    state: link
+  notify:
+    - Set hardware clock
+  tags:
+    - host
+
+- name: Enable selected locale
+  lineinfile:
+    path: /etc/locale.gen
+    line: "{{ item }}"
+  loop:
+    - "pl_PL.UTF-8"
+    - "en_US.UTF-8"
+  notify:
+    - Regenerate locale
+  tags:
+    - host
+
+- name: Set main locale
+  copy:
+    src: files/locale.conf
+    dest: /etc/locale.conf
+  tags:
+    - host
+
+- name: Apply console settings
+  copy:
+    src: files/vconsole.conf
+    dest: /etc/vconsole.conf
+  tags:
+    - host
+
 - name: Set the hostname
   hostname:
     name: "{{ host.name }}"
