@@ -9,3 +9,6 @@ host:
     - libva-intel-driver
     - intel-media-driver
     - vulkan-intel
+  app_groups:
+    - daily 
+    - develop

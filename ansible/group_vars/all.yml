@@ -25,6 +25,7 @@ packages:
       - tmux
       - wget
       - zsh
+      - powertop
   shell:
     pacman:
       - bat
@@ -37,6 +38,8 @@ packages:
       - the_silver_searcher
       - tmux
       - tree
+      - figlet
+      - neofetch
     aur:
       - antibody-bin
       - autojump
@@ -104,29 +107,34 @@ packages:
       - ttf-icomoon-feather
       - xbanish
       - xcursor-breeze
-  others:
+  daily:
     pacman:
-      - docker
-      - figlet
+      - calibre
       - gimp
-      - gnucash
       - gparted
-      - httpie
-      - jq
       - libreoffice-fresh
       - libreoffice-fresh-pl
-      - neofetch
-      - obsidian
       - peek
+      - screenkey
+      - thunderbird
+      - transmission-gtk
+      - vlc
+    aur:
+      - megasync-bin
+      - philipstv
+      - spotify
+  develop:
+    pacman:
+      - docker
+      - gulp
+      - httpie
+      - jq
       - python-black
       - python-isort
       - python-pip
       - python-poetry
       - python-pynvim
       - python-tox
-      - screenkey
-      - thunderbird
-      - vlc
-    aur:
-      - megasync-bin
-      - spotify
+      - python-virtualenv
+      - rustup
+    aur: []

@@ -7,3 +7,5 @@ host:
     dock:
   gfx_packages:
     - xf86-video-qxl
+  app_groups:
+    - develop

@@ -1,0 +1,19 @@
+---
+- name: Install pacman app groups
+  pacman:
+    name: "{{ lookup('vars', 'packages')[item]['pacman'] }}"
+  loop: "{{ host.app_groups }}"
+  ignore_errors: true
+  tags:
+    - apps
+
+- name: Install AUR app groups
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ lookup('vars', 'packages')[item]['aur'] }}"
+  loop: "{{ host.app_groups }}"
+  become: true
+  become_user: aur_builder
+  ignore_errors: true
+  tags:
+    - apps
