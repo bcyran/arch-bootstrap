@@ -10,9 +10,17 @@
   user:
     name: "{{ user.name }}"
     group: "{{ user.group }}"
-    password: "{{ user_password | password_hash('sha512') }}"
     shell: "{{ user.shell }}"
-    update_password: on_create
     create_home: true
+  register: create_user
+  tags:
+    - user
+
+- name: Set user password
+  user:
+    name: "{{ user.name }}"
+    password: "{{ user_password | password_hash('sha512') }}"
+    update_password: always
+  when: create_user.changed
   tags:
     - user
