@@ -1,0 +1,19 @@
+---
+- name: Find systemd-boot entry file
+  find:
+    paths: /boot/loader/entries
+    patterns: "*.conf"
+  register: boot_entries
+  failed_when: "boot_entries.files | length != 1"
+  tags:
+    - kernel
+
+- name: Add kernel params
+  replace:
+    path: "{{ boot_entries.files[0].path }}"
+    regexp: "^(options (?:(?! {{ item }}).)*)(?: {{ item }})?(.*?)?$"
+    replace: '\1 {{ item }}\2'
+  loop:
+    - "quiet splash"
+  tags:
+    - kernel

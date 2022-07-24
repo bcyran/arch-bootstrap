@@ -1,5 +1,6 @@
 ---
 - include_tasks: host.yml
+- include_tasks: kernel.yml
 - include_tasks: pacman.yml
 - include_tasks: yay.yml
 - include_tasks: network.yml
