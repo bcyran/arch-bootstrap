@@ -24,4 +24,5 @@
   tags:
     - desktop
 
+- include_tasks: xorg.yml
 - include_tasks: backlight.yml
