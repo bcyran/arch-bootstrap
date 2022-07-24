@@ -16,6 +16,19 @@
   tags:
     - yay
 
+- name: Setup makepkg
+  lineinfile:
+    dest: /etc/makepkg.conf
+    search_string: "{{ item.search }}"
+    line: "{{ item.line }}"
+  loop:
+    - search: "COMPRESSXZ"
+      line: "COMPRESSXZ=(xz -c -z - --threads=0)" 
+    - search: "MAKEFLAGS"
+      line: 'MAKEFLAGS="-j$(nproc)"'
+  tags:
+    - yay
+
 - name: Install yay
   kewlfft.aur.aur:
     name: yay
