@@ -83,6 +83,7 @@ packages:
       - tumbler
       - wmctrl
       - xautolock
+      - xclip
       - xdg-user-dirs
       - xorg-font-util
       - xorg-fonts-100dpi
