@@ -6,3 +6,11 @@
     enabled: true
   tags:
     - network
+
+- name: Setup WLAN / LAN connections to be exclusive
+  copy:
+    src: files/70-wifi-wired-exclusive.sh
+    dest: /etc/NetworkManager/dispatcher.d/70-wifi-wired-exclusive.sh
+    mode: "755"
+  tags:
+    - network
