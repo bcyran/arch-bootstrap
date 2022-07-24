@@ -1,0 +1,27 @@
+---
+- name: Install DDC/CI driver
+  kewlfft.aur.aur:
+    use: yay
+    name: "ddcci-driver-linux-dkms"
+  become: true
+  become_user: aur_builder
+  tags:
+    - desktop
+    - backlight
+
+- name: Create systemd backlight service
+  copy:
+    src: files/ddcci-backlight.service
+    dest: /etc/systemd/system/ddcci-backlight.service
+  tags:
+    - desktop
+    - backlight
+
+- name: Enable and start systemd backlight service
+  systemd:
+    name: ddcci-backlight.service
+    state: started
+    enabled: true
+  tags:
+    - desktop
+    - backlight

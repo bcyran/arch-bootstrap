@@ -15,17 +15,18 @@ packages:
       - curl
       - git
       - htop
+      - linux-headers
       - man-db
       - man-pages
       - neovim
       - networkmanager
       - pacman-contrib
+      - powertop
       - reflector
       - rsync
       - tmux
       - wget
       - zsh
-      - powertop
   shell:
     pacman:
       - bat
@@ -49,7 +50,6 @@ packages:
       - alsa-utils
       - arandr
       - autorandr
-      - ddcutil
       - dunst
       - feh
       - file-roller
@@ -94,7 +94,6 @@ packages:
       - appimagelauncher
       - autotiling
       - batify-git
-      - ddcci-driver-linux-dkms
       - i3lock-color
       - nerd-fonts-fira-code
       - paper-icon-theme-git

@@ -23,3 +23,5 @@
     append: yes
   tags:
     - desktop
+
+- include_tasks: backlight.yml
