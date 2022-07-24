@@ -6,12 +6,6 @@
   tags:
     - pacman
 
-- name: Refresh pacman cache
-  pacman:
-    update_cache: yes
-  tags: 
-    - pacman
-
 - name: Install base packages
   pacman:
     name: "{{ packages.base.pacman }}"
