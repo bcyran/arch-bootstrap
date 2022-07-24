@@ -3,7 +3,7 @@
   pacman:
     name: "{{ lookup('vars', 'packages')[item]['pacman'] }}"
   loop: "{{ host.app_groups }}"
-  ignore_errors: true
+  when: "lookup('vars', 'packages')[item]['pacman']"
   tags:
     - apps
 
@@ -12,8 +12,8 @@
     use: yay
     name: "{{ lookup('vars', 'packages')[item]['aur'] }}"
   loop: "{{ host.app_groups }}"
+  when: "lookup('vars', 'packages')[item]['aur']"
   become: true
   become_user: aur_builder
-  ignore_errors: true
   tags:
     - apps
