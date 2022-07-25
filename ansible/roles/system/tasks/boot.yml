@@ -6,7 +6,7 @@
   register: boot_entries
   failed_when: "boot_entries.files | length != 1"
   tags:
-    - kernel
+    - boot
 
 - name: Add kernel params
   replace:
@@ -16,4 +16,12 @@
   loop:
     - "quiet splash"
   tags:
-    - kernel
+    - boot
+
+- name: Disable boot menu timeout
+  lineinfile:
+    path: /boot/loader/loader.conf
+    search_string: timeout
+    line: "timeout 0"
+  tags:
+    - boot
