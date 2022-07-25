@@ -18,7 +18,7 @@
 
 - name: Setup makepkg
   lineinfile:
-    dest: /etc/makepkg.conf
+    path: /etc/makepkg.conf
     search_string: "{{ item.search }}"
     line: "{{ item.line }}"
   loop:
