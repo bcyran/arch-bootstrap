@@ -4,8 +4,6 @@
     name: "{{ lookup('vars', 'packages')[item]['pacman'] }}"
   loop: "{{ host.app_groups }}"
   when: "lookup('vars', 'packages')[item]['pacman']"
-  tags:
-    - apps
 
 - name: Install AUR app groups
   kewlfft.aur.aur:
@@ -15,5 +13,3 @@
   when: "lookup('vars', 'packages')[item]['aur']"
   become: true
   become_user: aur_builder
-  tags:
-    - apps

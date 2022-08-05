@@ -2,8 +2,6 @@
 - name: Install desktop-related pacman packages
   pacman:
     name: "{{ packages.desktop.pacman + host.gfx_packages | default([]) }}"
-  tags:
-    - desktop
 
 - name: Install desktop-related AUR packages
   kewlfft.aur.aur:
@@ -11,18 +9,12 @@
     name: "{{ packages.desktop.aur }}"
   become: true
   become_user: aur_builder
-  tags:
-    - desktop
 
 - name: Add user to video group
   user:
     name: "{{ user.name }}"
-    groups:
-      - "{{ user.group }}"
-      - video
+    groups: video
     append: yes
-  tags:
-    - desktop
 
 - include_tasks: xorg.yml
 - include_tasks: backlight.yml

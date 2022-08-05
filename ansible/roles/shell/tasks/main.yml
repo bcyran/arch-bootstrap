@@ -2,8 +2,6 @@
 - name: Install shell-related pacman packages
   pacman:
     name: "{{ packages.shell.pacman }}"
-  tags:
-    - shell
 
 - name: Install shell-related AUR packages
   kewlfft.aur.aur:
@@ -11,8 +9,6 @@
     name: "{{ packages.shell.aur }}"
   become: true
   become_user: aur_builder
-  tags:
-    - shell
 
 - name: Install zsh plugins via antibody
   shell:
@@ -22,4 +18,3 @@
   become_user: "{{ user.name }}"
   tags:
     - zsh
-    - shell

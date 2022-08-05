@@ -3,30 +3,22 @@
   pacman:
     name: snapper
     state: present
-  tags:
-    - snapper
 
 - name: Install snapper config
   template:
     src: templates/root.j2
     dest: /etc/snapper/configs/root
   register: install_snapper
-  tags:
-    - snapper
 
 - name: Install snapper config list
   copy:
     src: files/snapper
     dest: /etc/conf.d/snapper
-  tags:
-    - snapper
 
 - name: Create first snapshot
   command:
     cmd: snapper -c root create
   when: install_snapper.changed == true
-  tags:
-    - snapper
 
 - name: Enable snapper timers
   systemd:
@@ -36,5 +28,3 @@
   loop:
     - snapper-timeline.timer
     - snapper-cleanup.timer
-  tags:
-    - snapper

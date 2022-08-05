@@ -3,8 +3,6 @@
   pacman:
     name: chezmoi
     state: present
-  tags:
-    - dotfiles
 
 - name: Init chezmoi
   command:
@@ -13,8 +11,6 @@
   become: true
   become_user: "{{ user.name }}"
   register: chezmoi_init
-  tags:
-    - dotfiles
 
 - name: Update dotfiles
   git:
@@ -25,24 +21,18 @@
   become: true
   become_user: "{{ user.name }}"
   when: chezmoi_init.changed == false
-  tags:
-    - dotfiles
 
 - name: Create chezmoi config dir
   file:
     path: "/home/{{ user.name }}/.config/chezmoi"
     state: directory
     owner: "{{ user.name }}"
-  tags:
-    - dotfiles
 
 - name: Install chezmoi config
   template:
     src: templates/chezmoi.yaml.j2
     dest: "/home/{{ user.name }}/.config/chezmoi/chezmoi.yaml"
     owner: "{{ user.name }}"
-  tags:
-    - dotfiles
 
 - name: Get chezmoi status
   command:
@@ -52,8 +42,6 @@
   become_user: "{{ user.name }}"
   register: chezmoi_status
   changed_when: chezmoi_status.stdout != ""
-  tags:
-    - dotfiles
 
 - name: Apply dotfiles
   command:
@@ -61,5 +49,3 @@
   when: chezmoi_status.stdout != ""
   become: true
   become_user: "{{ user.name }}"
-  tags:
-    - dotfiles

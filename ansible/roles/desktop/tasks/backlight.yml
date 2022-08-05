@@ -6,7 +6,6 @@
   become: true
   become_user: aur_builder
   tags:
-    - desktop
     - backlight
 
 - name: Create systemd backlight service
@@ -14,7 +13,6 @@
     src: files/ddcci-backlight.service
     dest: /etc/systemd/system/ddcci-backlight.service
   tags:
-    - desktop
     - backlight
 
 - name: Enable and start systemd backlight service
@@ -23,5 +21,4 @@
     state: started
     enabled: true
   tags:
-    - desktop
     - backlight

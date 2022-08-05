@@ -5,20 +5,14 @@
     name: logiops-git
   become: true
   become_user: aur_builder
-  tags:
-    - mxmaster
 
 - name: Install logiops config
   copy:
     src: files/logid.cfg
     dest: /etc/logid.cfg
-  tags:
-    - mxmaster
 
 - name: Enable logid service
   systemd:
     name: logid.service
     state: started
     enabled: true
-  tags:
-    - mxmaster
