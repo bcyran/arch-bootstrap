@@ -14,8 +14,8 @@
     path: /etc/locale.gen
     line: "{{ item }}"
   loop:
-    - "pl_PL.UTF-8"
-    - "en_US.UTF-8"
+    - "pl_PL.UTF-8 UTF-8"
+    - "en_US.UTF-8 UTF-8"
   notify:
     - Regenerate locale
   tags:
