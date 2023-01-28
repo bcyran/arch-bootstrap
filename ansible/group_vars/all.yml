@@ -28,6 +28,8 @@ packages:
       - tmux
       - wget
       - zsh
+    aur:
+      - downgrade
   shell:
     pacman:
       - bat
@@ -100,8 +102,8 @@ packages:
       - batify-git
       - i3lock-color
       - paper-icon-theme-git
-      - themix-export-spotify-git
       - themix-gui-git
+      - timewall-bin
       - ttf-icomoon-feather
       - xbanish
       - xcursor-breeze
