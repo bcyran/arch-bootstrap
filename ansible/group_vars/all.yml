@@ -69,6 +69,7 @@ packages:
       - noto-fonts-cjk
       - noto-fonts-emoji
       - pavucontrol
+      - picom
       - playerctl
       - polybar
       - redshift
@@ -78,6 +79,7 @@ packages:
       - thunar-volman
       - tlp
       - ttf-dejavu
+      - ttf-firacode-nerd
       - ttf-font-awesome
       - ttf-roboto
       - tumbler
@@ -96,9 +98,7 @@ packages:
       - autotiling
       - batify-git
       - i3lock-color
-      - nerd-fonts-fira-code
       - paper-icon-theme-git
-      - picom-ibhagwan-git
       - themix-export-spotify-git
       - themix-gui-git
       - ttf-icomoon-feather

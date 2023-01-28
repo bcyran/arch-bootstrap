@@ -15,6 +15,7 @@ data:
       dock: "{{ host.network.dock }}"
   settings:
     gui: {{ settings.gui | default(true, true) }}
+    timewall: {{ settings.timewall | default(false, true) }}
     screenlock:
       enable: {{ settings.screenlock.enable | default(false, true) }}
       time: {{ settings.screenlock.time | default(30, true) }}
