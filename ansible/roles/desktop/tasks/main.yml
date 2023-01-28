@@ -18,3 +18,4 @@
 
 - include_tasks: xorg.yml
 - include_tasks: backlight.yml
+- include_tasks: spicetify.yml
