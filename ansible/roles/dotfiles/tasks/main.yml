@@ -6,7 +6,7 @@
 
 - name: Init chezmoi
   command:
-    cmd: "chezmoi init {{ dotfiles.repo }}"
+    cmd: "chezmoi init {{ dotfiles.repo_https }}"
     creates: "/home/{{ user.name }}/.local/share/chezmoi"
   become: true
   become_user: "{{ user.name }}"
@@ -14,7 +14,7 @@
 
 - name: Update dotfiles
   git:
-    repo: "{{ dotfiles.repo }}"
+    repo: "{{ dotfiles.repo_ssh }}"
     dest: "/home/{{ user.name }}/.local/share/chezmoi"
     clone: false
     update: true

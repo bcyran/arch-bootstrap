@@ -5,7 +5,8 @@ user:
   shell: /usr/bin/zsh
 
 dotfiles:
-  repo: https://github.com/bcyran/dotfiles.git
+  repo_https: https://github.com/bcyran/dotfiles.git
+  repo_ssh: git@github.com:bcyran/dotfiles.git
 
 packages:
   base:
