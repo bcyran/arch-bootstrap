@@ -16,7 +16,7 @@ data:
   settings:
     gui: {{ settings.gui | default(true, true) }}
     timewall: {{ settings.timewall | default(false, true) }}
-    screenlock:
+    autolock:
       enable: {{ settings.screenlock.enable | default(false, true) }}
       time: {{ settings.screenlock.time | default(30, true) }}
     dirs:
