@@ -18,3 +18,21 @@
   become_user: "{{ user.name }}"
   tags:
     - zsh
+
+- name: Check if fish plugins installed
+  command:
+    cmd: "/usr/bin/fish -c fisher list"
+  become: true
+  become_user: "{{ user.name }}"
+  register: fish_list
+  tags:
+    - fish
+
+- name: Install fish plugins via fisher
+  command:
+    cmd: "/usr/bin/fish -c fisher update"
+  become: true
+  become_user: "{{ user.name }}"
+  when: not fish_list.stdout
+  tags:
+    - fish

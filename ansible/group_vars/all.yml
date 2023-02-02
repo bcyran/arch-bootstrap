@@ -2,7 +2,7 @@ user:
   name: bazyli
   group: bazyli
   email: bazyli.cyran@gmail.com
-  shell: /usr/bin/zsh
+  shell: /usr/bin/fish
 
 dotfiles:
   repo_https: https://github.com/bcyran/dotfiles.git
@@ -14,6 +14,7 @@ packages:
       - base-devel
       - bc
       - curl
+      - fish
       - git
       - htop
       - linux-headers
@@ -36,7 +37,9 @@ packages:
       - btop
       - exa
       - fzf
+      - fisher
       - git-delta
+      - inetutils
       - ranger
       - ripgrep
       - the_silver_searcher
@@ -47,6 +50,7 @@ packages:
     aur:
       - antibody-bin
       - autojump
+      - virtualfish
   desktop:
     pacman:
       - alacritty
