@@ -37,6 +37,7 @@ packages:
       - btop
       - exa
       - fzf
+      - fd
       - fisher
       - git-delta
       - inetutils
@@ -58,6 +59,7 @@ packages:
       - arandr
       - autorandr
       - dunst
+      - fd
       - feh
       - file-roller
       - firefox
@@ -66,7 +68,7 @@ packages:
       - gnu-free-fonts
       - gthumb
       - gvfs
-      - i3-gaps
+      - i3-wm
       - inotify-tools
       - keepassxc
       - light
@@ -81,6 +83,7 @@ packages:
       - polybar
       - redshift
       - rofi
+      - rofi-calc
       - thunar
       - thunar-archive-plugin
       - thunar-volman
@@ -126,6 +129,7 @@ packages:
     aur:
       - megasync-bin
       - philipstv
+      - philipstv-gui
       - spotify
   develop:
     pacman:
