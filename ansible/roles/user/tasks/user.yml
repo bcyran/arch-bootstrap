@@ -16,10 +16,19 @@
   tags:
     - user
 
+- name: Prompt for user password
+  pause:
+    prompt: "Please enter password for user '{{ user.name }}'"
+    echo: false
+  register: password_prompt
+  when: create_user.changed
+  tags:
+    - user
+
 - name: Set user password
   user:
     name: "{{ user.name }}"
-    password: "{{ user_password | password_hash('sha512') }}"
+    password: "{{ password_prompt.user_input | password_hash('sha512') }}"
     update_password: always
   when: create_user.changed
   tags:
