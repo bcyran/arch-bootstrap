@@ -28,7 +28,6 @@ packages:
       - rsync
       - tmux
       - wget
-      - zsh
     aur:
       - downgrade
   shell:
@@ -48,27 +47,21 @@ packages:
       - tree
       - figlet
       - neofetch
+      - zoxide
     aur:
-      - antibody-bin
-      - autojump
       - virtualfish
   desktop:
     pacman:
       - alacritty
       - alsa-utils
-      - arandr
-      - autorandr
       - dunst
       - fd
-      - feh
       - file-roller
       - firefox
-      - flameshot
       - gnome-calculator
       - gnu-free-fonts
       - gthumb
       - gvfs
-      - i3-wm
       - inotify-tools
       - keepassxc
       - light
@@ -78,49 +71,80 @@ packages:
       - noto-fonts-cjk
       - noto-fonts-emoji
       - pavucontrol
-      - picom
       - playerctl
-      - polybar
-      - redshift
-      - rofi
       - rofi-calc
       - thunar
       - thunar-archive-plugin
       - thunar-volman
       - tlp
       - ttf-dejavu
-      - ttf-firacode-nerd
       - ttf-font-awesome
+      - ttf-jetbrains-mono-nerd
       - ttf-roboto
       - tumbler
       - wmctrl
-      - xautolock
-      - xclip
       - xdg-user-dirs
-      - xorg-font-util
-      - xorg-fonts-100dpi
-      - xorg-server
-      - xorg-xinit
       - zathura
+      - kdeconnect
       - zathura-pdf-mupdf
     aur:
       - appimagelauncher
-      - autotiling
       - batify-git
-      - i3lock-color
       - paper-icon-theme-git
       - themix-gui-git
       - timewall-bin
       - ttf-icomoon-feather
-      - xbanish
       - xcursor-breeze
+  desktop_xorg:
+    pacman:
+      - arandr
+      - autorandr
+      - feh
+      - flameshot
+      - i3-wm
+      - picom
+      - polybar
+      - redshift
+      - rofi
+      - xautolock
+      - xclip
+      - xorg-font-util
+      - xorg-fonts-100dpi
+      - xorg-server
+      - xorg-xinit
+    aur:
+      - autotiling
+      - i3lock-color
+      - xbanish
+  desktop_wayland:
+    pacman:
+      - copyq
+      - hyprland
+      - nwg-look
+      - qt5-wayland
+      - qt6-wayland
+      - swayidle
+      - swww
+      - wayland
+      - wdisplays
+      - wl-clipboard
+      - xdg-desktop-portal
+    aur:
+      - grimblast-git
+      - rofi-lbonn-wayland-git
+      - swaylock-effects
+      - waybar-hyprland
+      - wlsunset
+      - xdg-desktop-portal-hyprland
   daily:
     pacman:
       - calibre
       - gimp
+      - gnucash
       - gparted
       - libreoffice-fresh
       - libreoffice-fresh-pl
+      - obsidian
       - peek
       - screenkey
       - thunderbird

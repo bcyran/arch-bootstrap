@@ -17,4 +17,5 @@
     append: yes
 
 - include_tasks: xorg.yml
+- include_tasks: wayland.yml
 - include_tasks: backlight.yml

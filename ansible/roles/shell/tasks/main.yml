@@ -10,15 +10,6 @@
   become: true
   become_user: aur_builder
 
-- name: Install zsh plugins via antibody
-  shell:
-    cmd: "antibody bundle < /home/{{ user.name }}/.zsh/plugins.txt > /home/{{ user.name }}/.zsh_plugins.sh"
-    creates: "/home/{{ user.name }}/.zsh_plugins.sh"
-  become: true
-  become_user: "{{ user.name }}"
-  tags:
-    - zsh
-
 - name: Check if fish plugins installed
   command:
     cmd: "/usr/bin/fish -c fisher list"

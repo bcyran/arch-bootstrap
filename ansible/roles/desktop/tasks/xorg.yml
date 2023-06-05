@@ -1,4 +1,19 @@
 ---
+- name: Install Xorg desktop-related pacman packages
+  pacman:
+    name: "{{ packages.desktop_xorg.pacman | default([]) }}"
+  tags:
+    - xorg
+
+- name: Install Xorg desktop-related AUR packages
+  kewlfft.aur.aur:
+    use: yay
+    name: "{{ packages.desktop_xorg.aur }}"
+  become: true
+  become_user: aur_builder
+  tags:
+    - xorg
+
 - name: Setup libinput for touchpad
   copy:
     src: files/30-touchpad.conf
