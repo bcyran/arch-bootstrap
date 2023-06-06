@@ -72,7 +72,6 @@ packages:
       - noto-fonts-emoji
       - pavucontrol
       - playerctl
-      - rofi-calc
       - thunar
       - thunar-archive-plugin
       - thunar-volman
@@ -118,22 +117,21 @@ packages:
       - xbanish
   desktop_wayland:
     pacman:
-      - copyq
       - hyprland
-      - nwg-look
       - qt5-wayland
       - qt6-wayland
       - swayidle
-      - swww
+      - waybar
       - wayland
-      - wdisplays
       - wl-clipboard
       - xdg-desktop-portal
     aur:
       - grimblast-git
+      - nwg-look
       - rofi-lbonn-wayland-git
       - swaylock-effects
-      - waybar-hyprland
+      - swww
+      - wdisplays
       - wlsunset
       - xdg-desktop-portal-hyprland
   daily:
@@ -158,7 +156,6 @@ packages:
   develop:
     pacman:
       - docker
-      - gulp
       - httpie
       - jq
       - python-black
@@ -168,5 +165,4 @@ packages:
       - python-pynvim
       - python-tox
       - python-virtualenv
-      - rustup
     aur: []

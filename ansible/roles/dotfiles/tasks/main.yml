@@ -33,6 +33,9 @@
   become: true
   become_user: "{{ user.name }}"
   when: chezmoi_init.changed == false
+  tags:
+    - never
+    - update
 
 - name: Get chezmoi status
   command:
