@@ -4,6 +4,18 @@
     name: chezmoi
     state: present
 
+- name: Create chezmoi config dir
+  file:
+    path: "/home/{{ user.name }}/.config/chezmoi"
+    state: directory
+    owner: "{{ user.name }}"
+
+- name: Install chezmoi config
+  template:
+    src: templates/chezmoi.yaml.j2
+    dest: "/home/{{ user.name }}/.config/chezmoi/chezmoi.yaml"
+    owner: "{{ user.name }}"
+
 - name: Init chezmoi
   command:
     cmd: "chezmoi init {{ dotfiles.repo_https }}"
@@ -21,18 +33,6 @@
   become: true
   become_user: "{{ user.name }}"
   when: chezmoi_init.changed == false
-
-- name: Create chezmoi config dir
-  file:
-    path: "/home/{{ user.name }}/.config/chezmoi"
-    state: directory
-    owner: "{{ user.name }}"
-
-- name: Install chezmoi config
-  template:
-    src: templates/chezmoi.yaml.j2
-    dest: "/home/{{ user.name }}/.config/chezmoi/chezmoi.yaml"
-    owner: "{{ user.name }}"
 
 - name: Get chezmoi status
   command:

@@ -19,6 +19,9 @@ data:
     autolock:
       enable: {{ settings.screenlock.enable | default(false, true) }}
       time: {{ settings.screenlock.time | default(30, true) }}
+    autoblank:
+      enable: {{ settings.screenlock.enable | default(true, true) }}
+      time: {{ settings.screenlock.time | default(10, true) }}
     dirs:
       code: "/home/{{ user.name }}/Kod"
       screenshots: "/home/{{ user.name }}/Obrazy/Zrzuty ekranu"
