@@ -1,11 +1,13 @@
 {
-    "additional-repositories": [],
     "archinstall-language": "Polish",
     "audio": "pulseaudio",
-    "config_version": "2.5.0",
+    "bootloader": "grup-install",
+    "config_version": "2.5.6",
     "debug": false,
-    "gfx_driver": "Intel (open-source)",
     "hostname": "archlinux",
+    "kernels": [
+        "linux"
+    ],
     "keyboard-layout": "pl",
     "mirror-region": {
         "Poland": {
@@ -24,7 +26,6 @@
             "https://repo.skni.umcs.pl/archlinux/$repo/os/$arch": true
         }
     },
-    "mount_point": null,
     "nic": {
         "dhcp": true,
         "dns": null,
@@ -33,20 +34,22 @@
         "ip": null,
         "type": "nm"
     },
+    "no_pkg_lookups": false,
+    "offline": false,
     "packages": [
         "git",
-        "zsh",
+        "fish",
         "neovim",
         "ansible",
         "python-pip"
     ],
-    "plugin": null,
     "profile": {
-        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
+        "path": "/usr/lib/python3.11/site-packages/archinstall/profiles/minimal.py"
     },
     "script": "guided",
     "silent": false,
-    "sys-encoding": "UTF-8",
+    "sys-encoding": "utf-8",
+    "sys-language": "pl_PL.UTF-8",
     "timezone": "Europe/Warsaw",
-    "version": "2.5.0"
+    "version": "2.5.6"
 }
