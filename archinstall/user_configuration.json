@@ -1,7 +1,7 @@
 {
     "archinstall-language": "Polish",
     "audio": "pulseaudio",
-    "bootloader": "grup-install",
+    "bootloader": "grub-install",
     "config_version": "2.5.6",
     "debug": false,
     "hostname": "archlinux",
