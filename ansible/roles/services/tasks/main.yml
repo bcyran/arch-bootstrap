@@ -7,5 +7,3 @@
     enabled: true
   become: true
   become_user: "{{ user.name }}"
-  tags:
-    - system

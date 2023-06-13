@@ -10,6 +10,7 @@
   pacman:
     name: "{{ packages.base.pacman }}"
     state: present
+    update_cache: true
   tags: 
     - pacman
 
