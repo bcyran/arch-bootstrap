@@ -124,7 +124,6 @@ packages:
       - waybar
       - wayland
       - wl-clipboard
-      - xdg-desktop-portal
     aur:
       - grimblast-git
       - nwg-look
