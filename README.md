@@ -36,9 +36,12 @@ all:
 ```
 Replace `home` with `work` or `vm` as needed.
 
-Run the playbook, replace `{desired_password}` with correct value:
+Run the playbook:
 ```shell
-ansible-playbook -i hosts.yml playbook.yml --ask-become-pass --extra-vars "user_password={desired_password}" 
+ansible-playbook -i hosts.yml playbook.yml --ask-become-pass --skip-tags {xorg,wayland}
 ```
+You probably want to install only one of the `xorg` or `wayland` configs and skip the other.
 
-Logout and login again.
+If it's the first time the playbook is ran on the given machine, and user account didn't exist before, you will be asked to provide the desired password.
+
+After the playbook is finished, logout and login again - ready graphical environment should be started.
