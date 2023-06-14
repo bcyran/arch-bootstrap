@@ -7,3 +7,16 @@
     enabled: true
   become: true
   become_user: "{{ user.name }}"
+  ignore_errors: true
+  register: enable_ssh_agent_status
+
+- name: Enable ssh-agent service via machinectl
+  systemd:
+    scope: user
+    name: ssh-agent.service
+    state: started
+    enabled: true
+  become: true
+  become_user: "{{ user.name }}"
+  become_method: machinectl
+  when: enable_ssh_agent_status is failed
