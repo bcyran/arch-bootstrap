@@ -1,0 +1,14 @@
+host:
+  name: cyran
+  id: work
+  network:
+    wlan: wlp3s0
+    eth: enp0s31f6
+    dock: enp9s0u2u1u2
+  gfx_packages:
+    - libva-intel-driver
+    - intel-media-driver
+    - libva-mesa-driver
+    - vulkan-intel
+  app_groups:
+    - develop
