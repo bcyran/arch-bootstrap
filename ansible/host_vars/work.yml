@@ -12,3 +12,4 @@ host:
     - vulkan-intel
   app_groups:
     - develop
+  cores: 8

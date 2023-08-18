@@ -12,3 +12,4 @@ host:
   app_groups:
     - daily 
     - develop
+  cores: 18

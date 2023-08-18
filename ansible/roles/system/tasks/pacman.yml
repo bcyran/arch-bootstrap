@@ -1,7 +1,7 @@
 ---
 - name: Install pacman configuration
-  copy:
-    src: files/pacman.conf
+  template:
+    src: files/pacman.conf.j2
     dest: /etc/pacman.conf
   tags:
     - pacman
