@@ -13,6 +13,25 @@ data:
       wlan: "{{ host.network.wlan }}"
       eth: "{{ host.network.eth }}"
       dock: "{{ host.network.dock }}"
+    displays:
+      - description: "California Institute of Technology 0x1402"
+        output: "eDP-1"
+        resolution: "2880x1800"
+        position: "0x325"
+        scale: "1.5"
+        transform: 0
+      - description: "Dell Inc. DELL P2421D FJWHGC3"
+        output: "DP-6"
+        resolution: "2560x1440"
+        position: "1920x325"
+        scale: "1.0"
+        transform: 0
+      - description: "Dell Inc. DELL P2421D CGSHL93"
+        output: "DP-7"
+        resolution: "2560x1440"
+        position: "4480x0"
+        scale: "1.0"
+        transform: 3
   settings:
     gui: {{ settings.gui | default(true, true) }}
     timewall: {{ settings.timewall | default(false, true) }}
