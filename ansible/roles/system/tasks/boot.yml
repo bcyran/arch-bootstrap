@@ -2,7 +2,7 @@
 - name: Find systemd-boot entry file
   find:
     paths: /boot/loader/entries
-    patterns: "*.conf"
+    patterns: "*linux.conf"
   register: boot_entries
   failed_when: "boot_entries.files | length != 1"
   tags:
