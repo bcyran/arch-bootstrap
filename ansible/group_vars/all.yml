@@ -89,11 +89,11 @@ packages:
     aur:
       - appimagelauncher
       - batify-git
-      - paper-icon-theme-git
-      - themix-gui-git
       - timewall-bin
       - ttf-icomoon-feather
       - xcursor-breeze
+      - adw-gtk3
+      - we10x-icon-theme-git
   desktop_xorg:
     pacman:
       - arandr
