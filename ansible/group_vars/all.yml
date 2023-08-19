@@ -26,6 +26,7 @@ packages:
       - powertop
       - reflector
       - rsync
+      - terminus-font
       - tmux
       - wget
     aur:
