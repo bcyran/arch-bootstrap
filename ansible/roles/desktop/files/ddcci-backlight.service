@@ -1,8 +1,9 @@
 [Unit]
-After=multi-user.target
+After=graphical.target
 
 [Service]
 Type=oneshot
+ExecStartPre=/bin/sleep 30
 ExecStart=/usr/bin/modprobe ddcci_backlight
 ExecStop=/usr/bin/modprobe --remove ddcci_backlight
 RemainAfterExit=yes
