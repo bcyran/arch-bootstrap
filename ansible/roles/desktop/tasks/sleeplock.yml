@@ -1,0 +1,15 @@
+---
+- name: Create systemd sleeplock service
+  copy:
+    src: files/sleeplock@.service
+    dest: /etc/systemd/system/sleeplock@.service
+  tags:
+    - sleeplock
+
+- name: Enable and start sleeplock service for user
+  systemd:
+    name: "sleeplock@{{ user.name }}.service"
+    enabled: true
+  tags:
+    - sleeplock
+
