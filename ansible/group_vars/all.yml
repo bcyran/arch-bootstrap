@@ -121,6 +121,7 @@ packages:
       - hyprland
       - qt5-wayland
       - qt6-wayland
+      - rofi-calc
       - swayidle
       - waybar
       - wayland
