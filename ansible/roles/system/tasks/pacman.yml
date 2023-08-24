@@ -14,6 +14,13 @@
   tags: 
     - pacman
 
+- name: Copy reflector configuration
+  copy:
+    src: files/reflector.conf
+    dest: /etc/xdg/reflector/reflector.conf
+  tags:
+    - pacman
+
 - name: Enable automatic pacman mirorrlists refreshing
   systemd:
     name: reflector.timer
