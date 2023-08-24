@@ -73,6 +73,7 @@ packages:
       - noto-fonts-emoji
       - pavucontrol
       - playerctl
+      - polkit-kde-agent
       - thunar
       - thunar-archive-plugin
       - thunar-volman
@@ -85,7 +86,6 @@ packages:
       - wmctrl
       - xdg-user-dirs
       - zathura
-      - kdeconnect
       - zathura-pdf-mupdf
     aur:
       - appimagelauncher
