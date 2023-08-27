@@ -1,7 +1,7 @@
 ---
 - name: Install logiops
   kewlfft.aur.aur:
-    use: yay
+    use: paru
     name: logiops-git
   become: true
   become_user: aur_builder

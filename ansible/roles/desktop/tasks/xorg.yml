@@ -7,7 +7,6 @@
 
 - name: Install Xorg desktop-related AUR packages
   kewlfft.aur.aur:
-    use: yay
     name: "{{ packages.desktop_xorg.aur }}"
   become: true
   become_user: aur_builder

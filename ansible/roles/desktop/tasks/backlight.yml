@@ -1,7 +1,6 @@
 ---
 - name: Install DDC/CI driver
   kewlfft.aur.aur:
-    use: yay
     name: "ddcci-driver-linux-dkms"
   become: true
   become_user: aur_builder
