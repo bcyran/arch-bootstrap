@@ -20,6 +20,7 @@ packages:
       - linux-headers
       - man-db
       - man-pages
+      - ncdu
       - neovim
       - networkmanager
       - pacman-contrib
@@ -56,7 +57,6 @@ packages:
       - alacritty
       - alsa-utils
       - dunst
-      - fd
       - file-roller
       - firefox
       - gnome-calculator
@@ -141,6 +141,7 @@ packages:
       - gimp
       - gnucash
       - gparted
+      - imagemagick
       - libreoffice-fresh
       - libreoffice-fresh-pl
       - obsidian
@@ -150,6 +151,7 @@ packages:
       - transmission-gtk
       - vlc
     aur:
+      - anydesk-bin
       - megasync-bin
       - philipstv
       - philipstv-gui
@@ -166,4 +168,5 @@ packages:
       - python-pynvim
       - python-tox
       - python-virtualenv
+      - rustup
     aur: []
