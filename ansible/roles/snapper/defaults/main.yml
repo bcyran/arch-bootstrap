@@ -1,0 +1,6 @@
+snapper:
+  configs:
+    - name: "root"
+      subvolume: "/"
+    - name: "home"
+      subvolume: "/home"

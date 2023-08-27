@@ -6,19 +6,24 @@
 
 - name: Install snapper config
   template:
-    src: templates/root.j2
-    dest: /etc/snapper/configs/root
+    src: templates/config.j2
+    dest: "/etc/snapper/configs/{{ item.name }}"
   register: install_snapper
+  loop: "{{ snapper.configs }}"
+
 
 - name: Install snapper config list
-  copy:
-    src: files/snapper
+  template:
+    src: templates/snapper.j2
     dest: /etc/conf.d/snapper
 
 - name: Create first snapshot
   command:
-    cmd: snapper -c root create
-  when: install_snapper.changed == true
+    cmd: "snapper -c {{ item.name }} create"
+  when: install_snapper.results[config_idx].changed == true
+  loop: "{{ snapper.configs }}"
+  loop_control:
+    index_var: config_idx
 
 - name: Enable snapper timers
   systemd:

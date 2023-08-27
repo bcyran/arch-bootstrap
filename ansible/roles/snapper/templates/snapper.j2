@@ -3,4 +3,4 @@
 ## Type:        string
 ## Default:     ""
 # List of snapper configurations.
-SNAPPER_CONFIGS="root"
+SNAPPER_CONFIGS="{{ snapper.configs | map(attribute='name') | join(' ') }}"
