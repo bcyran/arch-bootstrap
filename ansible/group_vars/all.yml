@@ -1,7 +1,7 @@
 user:
   name: bazyli
   group: bazyli
-  email: bazyli.cyran@gmail.com
+  email: bazyli@cyran.dev
   shell: /usr/bin/fish
 
 dotfiles:
@@ -83,6 +83,7 @@ packages:
       - ttf-jetbrains-mono-nerd
       - ttf-roboto
       - tumbler
+      - wireplumber
       - wmctrl
       - xdg-user-dirs
       - zathura
@@ -129,7 +130,9 @@ packages:
     aur:
       - grimblast-git
       - nwg-look
+      - onagre-git
       - rofi-lbonn-wayland-git
+      - satty-bin
       - swaylock-effects
       - swww
       - wdisplays
@@ -142,11 +145,13 @@ packages:
       - gnucash
       - gparted
       - imagemagick
+      - kooha
       - libreoffice-fresh
       - libreoffice-fresh-pl
       - obsidian
       - peek
       - screenkey
+      - signal-desktop
       - thunderbird
       - transmission-gtk
       - vlc
@@ -155,6 +160,8 @@ packages:
       - megasync-bin
       - philipstv
       - philipstv-gui
+      - portfolio-performance-bin
+      - showmethekey
       - spotify
   develop:
     pacman:
