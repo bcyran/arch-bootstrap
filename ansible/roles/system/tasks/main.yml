@@ -2,5 +2,5 @@
 - include_tasks: host.yml
 - include_tasks: boot.yml
 - include_tasks: pacman.yml
-- include_tasks: aur.yml
+- include_tasks: yay.yml
 - include_tasks: network.yml
