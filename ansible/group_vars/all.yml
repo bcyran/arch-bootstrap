@@ -63,8 +63,8 @@ packages:
       - gnu-free-fonts
       - gthumb
       - gvfs
+      - hyprland
       - inotify-tools
-      - keepassxc
       - light
       - lxappearance
       - mesa
@@ -72,8 +72,14 @@ packages:
       - noto-fonts-cjk
       - noto-fonts-emoji
       - pavucontrol
+      - pipewire-audio
+      - pipewire-alsa
+      - pipewire-pulse
       - playerctl
       - polkit-kde-agent
+      - qt5-wayland
+      - qt6-wayland
+      - swayidle
       - thunar
       - thunar-archive-plugin
       - thunar-volman
@@ -83,60 +89,30 @@ packages:
       - ttf-jetbrains-mono-nerd
       - ttf-roboto
       - tumbler
+      - waybar
+      - wayland
       - wireplumber
+      - wl-clipboard
       - wmctrl
       - xdg-user-dirs
       - zathura
       - zathura-pdf-mupdf
     aur:
+      - adw-gtk3
       - appimagelauncher
       - batify-git
-      - timewall-bin
-      - ttf-icomoon-feather
-      - xcursor-breeze
-      - adw-gtk3
-      - we10x-icon-theme-git
-  desktop_xorg:
-    pacman:
-      - arandr
-      - autorandr
-      - feh
-      - flameshot
-      - i3-wm
-      - picom
-      - polybar
-      - redshift
-      - rofi
-      - xautolock
-      - xclip
-      - xorg-font-util
-      - xorg-fonts-100dpi
-      - xorg-server
-      - xorg-xinit
-    aur:
-      - autotiling
-      - i3lock-color
-      - xbanish
-  desktop_wayland:
-    pacman:
-      - hyprland
-      - qt5-wayland
-      - qt6-wayland
-      - rofi-calc
-      - swayidle
-      - waybar
-      - wayland
-      - wl-clipboard
-    aur:
       - grimblast-git
       - nwg-look
       - onagre-git
-      - rofi-lbonn-wayland-git
       - satty-bin
       - swaylock-effects
       - swww
+      - timewall-bin
+      - ttf-icomoon-feather
       - wdisplays
+      - we10x-icon-theme-git
       - wlsunset
+      - xcursor-breeze
       - xdg-desktop-portal-hyprland
   daily:
     pacman:
@@ -145,14 +121,12 @@ packages:
       - gnucash
       - gparted
       - imagemagick
+      - keepassxc
       - kooha
       - libreoffice-fresh
       - libreoffice-fresh-pl
       - obsidian
-      - peek
-      - screenkey
       - signal-desktop
-      - thunderbird
       - transmission-gtk
       - vlc
     aur:
