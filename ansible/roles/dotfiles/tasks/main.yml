@@ -15,6 +15,7 @@
     src: templates/chezmoi.yaml.j2
     dest: "/home/{{ user.name }}/.config/chezmoi/chezmoi.yaml"
     owner: "{{ user.name }}"
+    force: false
 
 - name: Init chezmoi
   command:

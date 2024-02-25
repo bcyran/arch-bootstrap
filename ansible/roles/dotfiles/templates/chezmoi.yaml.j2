@@ -20,36 +20,43 @@ data:
         position: "0x325"
         scale: "1.5"
         transform: 0
+        id_by_output: false
       - description: "Dell Inc. DELL P2421D FJWHGC3"
         output: "DP-6"
         resolution: "2560x1440"
         position: "1920x325"
         scale: "1.0"
         transform: 0
+        id_by_output: false
       - description: "Dell Inc. DELL P2421D CGSHL93"
         output: "DP-7"
         resolution: "2560x1440"
         position: "4480x0"
         scale: "1.0"
         transform: 3
+        id_by_output: false
   settings:
-    gui: {{ settings.gui | default(true, true) }}
-    timewall: {{ settings.timewall | default(false, true) }}
-    autolock:
-      enable: {{ settings.screenlock.enable | default(false, true) }}
-      time: {{ settings.screenlock.time | default(30, true) }}
+    gui: true
+    timewall: false
+    autodim:
+      enable: true
+      time: 5
     autoblank:
-      enable: {{ settings.screenlock.enable | default(true, true) }}
-      time: {{ settings.screenlock.time | default(10, true) }}
+      enable: true
+      time: 15
+    autolock:
+      enable: false
+      time: 30
     dirs:
       code: "/home/{{ user.name }}/Kod"
       screenshots: "/home/{{ user.name }}/Obrazy/Zrzuty ekranu"
       wallpapers: "/home/{{ user.name }}/Obrazy/Tapety"
     theme:
       bg: "#1e222a"
-      fg: "#abb2bf"
       lightbg: "#373b43"
-      accent1: "#98c379"
+      fg: "#abb2bf"
+      darkfg: "#5a616e"
+      accent1: "#e5c07b"
       accent2: "#61afef"
-      accent3: "#e5c07b"
+      accent3: "#98c379"
       accent4: "#e06c75"
