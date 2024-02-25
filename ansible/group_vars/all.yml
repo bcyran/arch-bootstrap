@@ -65,20 +65,20 @@ packages:
       - gvfs
       - hyprland
       - inotify-tools
-      - light
       - lxappearance
       - mesa
       - nm-connection-editor
       - noto-fonts-cjk
       - noto-fonts-emoji
       - pavucontrol
-      - pipewire-audio
       - pipewire-alsa
+      - pipewire-audio
       - pipewire-pulse
       - playerctl
       - polkit-kde-agent
       - qt5-wayland
       - qt6-wayland
+      - rustup
       - swayidle
       - thunar
       - thunar-archive-plugin
@@ -102,6 +102,7 @@ packages:
       - appimagelauncher
       - batify-git
       - grimblast-git
+      - light
       - nwg-look
       - onagre-git
       - satty-bin
