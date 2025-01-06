@@ -1,3 +1,6 @@
+> [!WARNING]
+> This repo is archived because I moved my setup to NixOS and Home Manager. See my [nix-config](https://github.com/bcyran/nix-config) ✨.
+
 # Personal Arch Linux bootstrapping
 
 ## archinstall
